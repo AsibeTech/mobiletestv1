@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - AsibeTek Solutions</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Reuse existing CSS -->
+    <link rel="icon" href="ASIBETEKlogo.png" type="image/png">
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Georgia', serif;
+            color: #000000; /* Professional black text */
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header and Navigation */
+        header nav {
+            background-color: #4b0082;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        header .logo img {
+            height: 50px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-around;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #6a0dad;
+        }
+
+        /* Portfolio Section */
+        #portfolio {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        #portfolio h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #4b0082;
+        }
+
+        #portfolio p {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #333333;
+            margin-bottom: 30px;
+        }
+
+        /* Portfolio Tabs */
+        .portfolio-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .portfolio-tab {
+            margin: 0 10px;
+            padding: 12px 25px;
+            border: 1px solid #4b0082;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: white;
+            color: #4b0082;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .portfolio-tab.active {
+            background-color: #4b0082;
+            color: white;
+        }
+
+        .portfolio-tab:hover {
+            background-color: #6a0dad;
+            color: white;
+        }
+
+        /* Portfolio Items */
+        .portfolio-item {
+            margin: 20px 0;
+            display: none; /* Hide all by default */
+            padding: 20px;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .portfolio-item.active {
+            display: block; /* Show only active items */
+        }
+
+        .portfolio-item h4 {
+            font-size: 1.5rem;
+            color: #4b0082;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .portfolio-item p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #000000; /* Ensure descriptions are black */
+            margin-bottom: 15px;
+        }
+
+        .portfolio-item video {
+            display: block;
+            margin: 0 auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="ASIBETEKlogo.png" alt="asibeTek Logo">
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="ai-services.html">AI AUTOMATION</a></li>
+                <li><a href="index.html#services">SERVICES</a></li>
+                <li><a href="index.html#contact-us">CONTACT US</a></li>
+                <li><a href="portfolio.html">PORTFOLIO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Portfolio Section -->
+    <main id="portfolio">
+        <h2><strong>Our Portfolio</strong></h2>
+        <p><strong>Check out some of the projects we have worked on.</strong></p>
+
+        <!-- Portfolio Tabs -->
+        <div class="portfolio-tabs">
+            <button class="portfolio-tab active" data-category="all">All</button>
+            <button class="portfolio-tab" data-category="websites">Websites</button>
+            <button class="portfolio-tab" data-category="apps">Apps</button>
+        </div>
+
+        <!-- Portfolio Content -->
+        <div id="portfolio-content">
+            <!-- Websites -->
+            <div class="portfolio-item websites active">
+                <h4><strong>Higher Ground Non-Profit Website</strong></h4>
+                <p style="color: #000000;">Higher Ground is a non-profit organization supporting individuals with disabilities, especially the visually impaired. We developed a website to assist with event management, volunteer applications, and their chess club.</p>
+                <video width="400" height="225" autoplay muted loop>
+                    <source src="HGV1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+              <!-- Ormiston Primary School Behavior Management Website -->
+    <div class="portfolio-item websites active">
+        <h4><strong>Ormiston Primary School Behavior Management Website</strong></h4>
+        <p style="color: #000000;">This website was designed to assist teachers in tackling student behaviors by providing structured solutions. It categorizes behaviors, explains them, and offers Tier 1 and Tier 2 intervention strategies along with additional resources.</p>
+        <video width="400" height="225" autoplay muted loop>
+            <source src="ormv.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</div>
+
+            <!-- Apps -->
+            <div class="portfolio-item apps active">
+                <h4><strong>Higher Ground Mobile App</strong></h4>
+                <p style="color: #000000;">We created an accessibility-focused mobile app for Higher Ground, ensuring screen reader compatibility and a user-friendly design.</p>
+                <video width="400" height="225" autoplay muted loop>
+                    <source src="HGV2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="portfolio-item apps active">
+                <h4><strong>MuscleGen App</strong></h4>
+                <p style="color: #000000;">MuscleGen is a fitness app that generates workouts based on muscle groups, incorporates gamification, and includes water intake reminders.</p>
+                <video width="400" height="225" autoplay muted loop>
+                    <source src="MGV.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // JavaScript for Tab Filtering
+        document.querySelectorAll('.portfolio-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs
+                document.querySelectorAll('.portfolio-tab').forEach(tab => tab.classList.remove('active'));
+                tab.classList.add('active'); // Add active class to clicked tab
+                
+                const category = tab.dataset.category; // Get category from tab
+                
+                // Show/Hide portfolio items based on category
+                document.querySelectorAll('.portfolio-item').forEach(item => {
+                    if (category === 'all' || item.classList.contains(category)) {
+                        item.classList.add('active');
+                    } else {
+                        item.classList.remove('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
