@@ -23,21 +23,6 @@ header nav {
     top: 0;
     z-index: 100;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Ensure the nav spans the full width */
-}
-
-/* Make links stack on mobile */
-@media (max-width: 768px) {
-    header nav {
-        flex-direction: column;  /* Stack items vertically */
-        padding: 10px;  /* Reduce padding for smaller screens */
-    }
-
-    header nav a {
-        text-align: center;  /* Center text */
-        width: 100%;  /* Take up full width */
-        padding: 10px;  /* Add padding for easy clicking */
-    }
 }
 
 header nav .logo img {
@@ -51,6 +36,7 @@ header nav .logo img {
     justify-content: center;
     text-align: center;
 }
+
 /* Style for the brand name */
 .brand-name {
     font-size: 18px; /* Slightly smaller */
@@ -63,8 +49,7 @@ header nav .logo img {
     font-family: 'Arial', sans-serif; /* Clean, modern font */
 }
 
-
-
+/* Menu Styles */
 .menu {
     list-style: none;
     display: flex;
@@ -84,6 +69,45 @@ header nav .logo img {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 5px;
 }
+
+/* Hamburger Menu Styles (Hidden by default) */
+.hamburger-menu {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    /* Hide the menu on small screens */
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    /* Show hamburger menu on mobile */
+    .hamburger-menu {
+        display: block;
+    }
+
+    /* Style for menu items on mobile */
+    .menu li {
+        padding: 10px 0;
+        border-bottom: 1px solid white;
+    }
+
+    .menu li a {
+        font-size: 18px;
+    }
+}
+
 
 /* Home Section */
 #home {
